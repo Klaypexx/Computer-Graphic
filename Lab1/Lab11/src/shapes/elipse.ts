@@ -1,22 +1,15 @@
-import Point from "./point";
-import Shape from "./shape";
+import Shape, { ShapeConfig } from "./shape";
 
 class Ellipse extends Shape {
   radiusX: number;
   radiusY: number;
   lineWidth: number;
 
-  constructor(
-    position: Point,
-    radiusX: number,
-    radiusY: number,
-    lineWidth: number,
-    color: string
-  ) {
-    super(position, color);
-    this.radiusX = radiusX;
-    this.radiusY = radiusY;
-    this.lineWidth = lineWidth;
+  constructor(config: ShapeConfig) {
+    super(config);
+    this.radiusX = config.radiusX;
+    this.radiusY = config.radiusY;
+    this.lineWidth = config.lineWidth;
   }
 
   draw(ctx: CanvasRenderingContext2D, bounceHeight: number) {

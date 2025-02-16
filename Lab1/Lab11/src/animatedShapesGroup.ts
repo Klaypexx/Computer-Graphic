@@ -6,11 +6,15 @@ class AnimatedShapesGroup {
   bounceHeight: number;
   bounceSpeed: number;
 
-  constructor(shapes: Shape[], bounceHeight: number, bounceSpeed: number) {
-    this.shapes = shapes;
-    this.angle = Math.random() * Math.PI * 2; // Разные начальные углы
-    this.bounceHeight = bounceHeight;
-    this.bounceSpeed = bounceSpeed;
+  constructor(config: {
+    shapes: Shape[];
+    bounceHeight: number;
+    bounceSpeed: number;
+  }) {
+    this.angle = 0;
+    this.shapes = config.shapes;
+    this.bounceHeight = config.bounceHeight;
+    this.bounceSpeed = config.bounceSpeed;
   }
 
   animate(ctx: CanvasRenderingContext2D) {

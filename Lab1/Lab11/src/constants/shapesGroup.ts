@@ -1,41 +1,80 @@
-import {
-  default as AnimatedShapesGroup,
-  default as animatedShapesGroup,
-} from "../animatedShapesGroup";
+import AnimatedShapesGroup from "../animatedShapesGroup";
 import Diagonal from "../shapes/diagonal";
 import Ellipse from "../shapes/elipse";
-import Point from "../shapes/point";
 import Rectangle from "../shapes/rectangle";
 
-export const shapesGroup: animatedShapesGroup[] = [
-  // Группа для буквы М
-  new AnimatedShapesGroup(
-    [
-      new Rectangle(new Point(100, 200), 40, 200, "#31859b"),
-      new Rectangle(new Point(220, 200), 40, 200, "#31859b"),
-      new Diagonal(new Point(120, 220), new Point(180, 395), 40, "#31859b"),
-      new Diagonal(new Point(240, 220), new Point(180, 395), 40, "#31859b"),
+export const shapesGroup: AnimatedShapesGroup[] = [
+  new AnimatedShapesGroup({
+    shapes: [
+      new Rectangle({
+        position: { x: 100, y: 200 },
+        width: 40,
+        height: 200,
+        color: "#31859b",
+      }),
+      new Rectangle({
+        position: { x: 220, y: 200 },
+        width: 40,
+        height: 200,
+        color: "#31859b",
+      }),
+      new Diagonal({
+        position: { x: 120, y: 220 },
+        endPosition: { x: 180, y: 395 },
+        lineWidth: 40,
+        color: "#31859b",
+      }),
+      new Diagonal({
+        position: { x: 240, y: 220 },
+        endPosition: { x: 180, y: 395 },
+        lineWidth: 40,
+        color: "#31859b",
+      }),
     ],
-    25,
-    0.05
-  ),
-
-  // Группа для буквы Д
-  new AnimatedShapesGroup(
-    [
-      new Rectangle(new Point(300, 360), 160, 40, "#76923c"),
-      new Rectangle(new Point(320, 200), 40, 160, "#76923c"),
-      new Rectangle(new Point(400, 200), 40, 160, "#76923c"),
-      new Rectangle(new Point(340, 200), 100, 40, "#76923c"),
+    bounceHeight: 25,
+    bounceSpeed: 0.05,
+  }),
+  new AnimatedShapesGroup({
+    shapes: [
+      new Rectangle({
+        position: { x: 300, y: 360 },
+        width: 160,
+        height: 40,
+        color: "#76923c",
+      }),
+      new Rectangle({
+        position: { x: 320, y: 200 },
+        width: 40,
+        height: 160,
+        color: "#76923c",
+      }),
+      new Rectangle({
+        position: { x: 400, y: 200 },
+        width: 40,
+        height: 160,
+        color: "#76923c",
+      }),
+      new Rectangle({
+        position: { x: 340, y: 200 },
+        width: 100,
+        height: 40,
+        color: "#76923c",
+      }),
     ],
-    100,
-    0.01
-  ),
-
-  // Группа для буквы О
-  new AnimatedShapesGroup(
-    [new Ellipse(new Point(580, 300), 60, 80, 40, "#953734")],
-    5,
-    0.05
-  ),
+    bounceHeight: 100,
+    bounceSpeed: 0.01,
+  }),
+  new AnimatedShapesGroup({
+    shapes: [
+      new Ellipse({
+        position: { x: 580, y: 300 },
+        radiusX: 60,
+        radiusY: 80,
+        lineWidth: 40,
+        color: "#953734",
+      }),
+    ],
+    bounceHeight: 5,
+    bounceSpeed: 0.05,
+  }),
 ];

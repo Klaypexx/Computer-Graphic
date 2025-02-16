@@ -1,19 +1,13 @@
-import Point from "./point";
-import Shape from "./shape";
+import Shape, { ShapeConfig } from "./shape";
 
 class Diagonal extends Shape {
-  endPosition: Point;
+  endPosition: { x: number; y: number };
   lineWidth: number;
 
-  constructor(
-    startPosition: Point,
-    endPosition: Point,
-    lineWidth: number,
-    color: string
-  ) {
-    super(startPosition, color);
-    this.endPosition = endPosition;
-    this.lineWidth = lineWidth;
+  constructor(config: ShapeConfig) {
+    super(config);
+    this.endPosition = config.endPosition;
+    this.lineWidth = config.lineWidth;
   }
 
   draw(ctx: CanvasRenderingContext2D, bounceHeight: number) {

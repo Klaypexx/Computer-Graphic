@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle Drawing</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+        display: block;
+        margin-top: 10px;
+      }
+      form {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="circleForm">
+      <label>
+        Center X:
+        <input type="number" id="centerX" value="250" required />
+      </label>
+      <label>
+        Center Y:
+        <input type="number" id="centerY" value="250" required />
+      </label>
+      <label>
+        Radius:
+        <input type="number" id="radius" value="100" required />
+      </label>
+      <label>
+        Border Color:
+        <input type="color" id="borderColor" value="#ff0000" required />
+      </label>
+      <label>
+        Fill Color:
+        <input type="color" id="fillColor" value="#add8e6" required />
+      </label>
+      <button type="submit">Draw Circle</button>
+    </form>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script src="./dist/bundle.js"></script>
+  </body>
+</html>

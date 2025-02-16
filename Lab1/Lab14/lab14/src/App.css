@@ -1,0 +1,140 @@
+p {
+  font-size: 20px;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1001;
+}
+
+.popup-box p {
+  margin-bottom: 20px;
+}
+
+.popup-box button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-box button:hover {
+  background-color: #0056b3;
+}
+
+.container.locked {
+  pointer-events: none;
+}
+
+.popup-box button {
+  pointer-events: auto;
+}
+
+.container {
+  position: relative;
+  height: 700px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.content-box {
+  display: inline-block;
+  height: 700px;
+  min-width: 1000px;
+  border: solid;
+  border-color: blue;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.ui-button {
+  position: absolute;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  left: 800px;
+  top: 30px;
+}
+
+.game-box {
+  display: flex;
+}
+
+.draw-box {
+  width: 350px;
+  margin-right: 20px;
+}
+
+.guessedLetters-box {
+  padding-top: 200px;
+}
+
+.hint-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.hint-box p {
+  text-align: center;
+}
+
+.InputLetters-box {
+  position: relative;
+  top: 100px;
+}
+
+.new-content-box {
+  border-color: black;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.new-hint-text {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.new-guessedLetters-box {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.new-history-box {
+  padding-left: 20px;
+}
+
+.new-guess-count-box {
+  margin-top: 20px;
+}
+
+.new-input-letter-box {
+  position: relative;
+  top: 250px;
+}

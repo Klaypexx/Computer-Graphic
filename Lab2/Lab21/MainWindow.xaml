@@ -1,0 +1,34 @@
+﻿<Window x:Class="ImageDragDrop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Image Drag and Drop" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Menu Grid.Row="0" Panel.ZIndex="1">
+            <MenuItem Header="File">
+                <MenuItem Header="Open Image" Click="OpenImage_Click"/>
+            </MenuItem>
+        </Menu>
+
+
+        <Grid Grid.Row="1" Background="LightGray"
+              MouseLeftButtonDown="ImageContainer_MouseLeftButtonDown"
+              MouseMove="ImageContainer_MouseMove"
+              MouseLeftButtonUp="ImageContainer_MouseLeftButtonUp">
+
+            <Image Name="BackgroundImage" Stretch="Fill" Opacity="0.5" Panel.ZIndex="0" />
+
+            <Image Name="DisplayedImage" Stretch="Uniform"
+                   RenderTransformOrigin="0.5,0.5" Panel.ZIndex="1">
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="ImageTransform" />
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+    </Grid>
+</Window>

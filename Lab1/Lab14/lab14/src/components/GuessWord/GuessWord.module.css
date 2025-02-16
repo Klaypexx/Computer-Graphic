@@ -1,0 +1,25 @@
+.wordBox {
+  margin-bottom: 20px;
+  height: 90px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.letterBox {
+  margin-right: 10px;
+}
+
+.letterBorder {
+  width: 80px;
+  height: 10px;
+  background-color: #4f81bd;
+  border: solid;
+  border: 10px;
+  border-color: black;
+}
+
+.letter {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+}

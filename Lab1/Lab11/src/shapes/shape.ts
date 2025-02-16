@@ -1,12 +1,16 @@
-import Point from "./point";
+export interface ShapeConfig {
+  position: { x: number; y: number };
+  color: string;
+  [key: string]: any; // Позволяет добавлять специфические свойства фигур
+}
 
 class Shape {
-  position: Point;
+  position: { x: number; y: number };
   color: string;
 
-  constructor(position: Point, color: string) {
-    this.position = position;
-    this.color = color;
+  constructor(config: ShapeConfig) {
+    this.position = config.position;
+    this.color = config.color;
   }
 
   draw(ctx: CanvasRenderingContext2D, bounceHeight: number) {}

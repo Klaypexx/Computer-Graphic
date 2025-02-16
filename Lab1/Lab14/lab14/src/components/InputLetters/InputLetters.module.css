@@ -1,0 +1,30 @@
+.wordsContainer {
+  display: flex;
+  margin: 0 auto;
+}
+
+.wordBox {
+  margin-right: 9px;
+}
+
+.wordBox p {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.newWordBox {
+  margin-right: 5px;
+}
+
+.newWordBox p {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
